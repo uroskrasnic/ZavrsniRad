@@ -1,0 +1,7 @@
+Feature: Other sports
+
+  Scenario: Pick from other sports Futsal
+
+    Given that user clicks on More button
+    And choose from more sports Futsal
+    Then user should be redirected to Futsal page

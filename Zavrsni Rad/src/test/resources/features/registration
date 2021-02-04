@@ -1,0 +1,12 @@
+Feature: Registration
+
+  Scenario: "I'm not robot" confirmation - negative flow
+
+    Given that user clicks on Accept on Privacy
+    And that user clicks on registration button
+    And fill the email field with valid data
+    And fill the password field with minimum 5 characters
+    And click on Sign up
+    Then error messagge is displeyed
+
+

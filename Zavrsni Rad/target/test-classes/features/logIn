@@ -1,0 +1,32 @@
+Feature: Log in
+
+  Scenario Outline: Successifull log in
+
+  Given that user clicks on Accept on Privacy
+    And user click on Log In button
+    And fill the <email> box with valid data
+    And fill the <password> box with proper password
+    And user click on Log In
+    Then user is logged in
+    Examples:
+      | email                |  password |
+      |uroskrasnic@yahoo.com | Diamanti23|
+
+
+
+  Scenario Outline: Successifull log in ( with log out functionallity)
+    Given that user clicks on Accept on Privacy
+    And user click on Log In button
+    And fill the <email> box with valid data
+    And fill the <password> box with proper password
+    And user click on Log In
+    Then proper <profilName> is shown on header section
+    When user click on profile name button
+    And click on Sign out button
+    Then user is logged out.
+    Examples:
+    |email                      |password                |profilName                   |
+    |uroskrasnic@yahoo.com      |Diamanti23              |uroskrasnic@yahoo.com        |
+    |uroskrasnic@yopmail.com    |Trening12!              |uroskrasnic@yopmail.com      |
+
+

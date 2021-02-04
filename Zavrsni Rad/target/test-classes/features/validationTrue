@@ -1,0 +1,8 @@
+Feature: Validation
+
+  Scenario: Check the Champions League winner in season 2011/2012
+
+    Given that user clicks on Accept on Privacy
+    And then user clicks on Champions League button
+    And user clicks on Archive page
+    Then Check the Champions League winner in season 2011/2012

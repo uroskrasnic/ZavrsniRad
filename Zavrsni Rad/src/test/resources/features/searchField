@@ -1,0 +1,9 @@
+Feature: Search Field
+
+  Scenario: Search for FC Barcelona - positive flow
+
+    Given that user clicks on Accept on Privacy
+    And that user click on Search button
+    And type into Search box 'Barcelona'
+    And get the first result
+    Then team name from header match team name from search box
